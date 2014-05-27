@@ -1,6 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 @import "compass/reset";
 
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 $fontSize: 16px;
 $font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
@@ -12,4 +18,6 @@ $linkVisitedColor: $linkColor;
 $linkHoverColor: $linkColor;
 
 $borderColor: #dfdfdf;
+
+$width: 940px;
 

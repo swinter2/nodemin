@@ -68,9 +68,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 4, ../sass/_base.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* line 8, ../sass/screen.scss */
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.2em;
+}
+
+/* line 14, ../sass/screen.scss */
+.wrap {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* line 19, ../sass/screen.scss */
+header {
+  width: 100%;
 }

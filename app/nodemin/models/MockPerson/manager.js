@@ -9,18 +9,20 @@ var MockPerson = require('./entity');
 module.exports = function () {
 
     this.displayName = "Mock People";
-    this.indexSlug = "mock-people";
+    this.slug = "mock-people";
+
+    // TODO: put an uploads path for user uploaded media.
     
-    this.get = function () {
-        return new MockPerson();
+    this.get = function (id) {
+        return new MockPerson({id: 1});
     };
 
     this.list = function () {
         return [
-            new MockPerson(),
-            new MockPerson(),
-            new MockPerson(),
-            new MockPerson()
+            new MockPerson({id: 1, firstname: "Gary"}),
+            new MockPerson({id: 2, firstname: "Hans"}),
+            new MockPerson({id: 3, firstname: "Ronald"}),
+            new MockPerson({id: 4, firstname: "Sam"})
         ];
     };
 

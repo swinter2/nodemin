@@ -5,4 +5,10 @@ html
     link(rel='stylesheet', href='/admin/static/stylesheets/screen.css', media="screen,projection")
   body
     div.wrap
+      header
+        h1 NodeMin
+      nav
+        a(href="/admin") Index
+        //- for manager in masterManager.managers
+        //-   a(href="/admin/#{manager.slug}") #{manager.displayName}
       block content

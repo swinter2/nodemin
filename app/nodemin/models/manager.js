@@ -3,9 +3,10 @@ A model manager which tells the admin what types of models are available in the 
 */
 var MockPersonManager = require('./MockPerson/manager');
 
+var mockPeople = new MockPersonManager();
+
 module.exports = function () {
-    this.managers = [
-        new MockPersonManager()
-    ];
+    this.managers = {};
+    this.managers[mockPeople.slug] = mockPeople;
 };
 

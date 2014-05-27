@@ -1,0 +1,27 @@
+extends layout
+block content
+  h2 Edit #{entity.displayName}
+  p
+    a(href="/admin/#{manager.slug}") #{manager.displayName}
+  form(method="post", action="", enctype="multipart/form")
+    for field in entity.fields
+      if field.type === 'text'
+        p
+          label #{field.displayName}
+          input(type='text', value="#{entity[field.name]}")
+      if field.type === 'int'
+        p
+          label #{field.displayName}
+          input(type='text', value="#{entity[field.name]}", data-type="int")
+      if field.type === 'textbox'
+        p
+          label #{field.displayName}
+          br
+          textarea #{entity[field.name]}
+      if field.type === 'image'
+        p
+          label #{field.displayName}
+          br
+          img(src="#{entity[field]}")
+    p
+      input(type="submit", value="Save")

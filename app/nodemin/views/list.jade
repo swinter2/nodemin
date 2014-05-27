@@ -1,0 +1,7 @@
+extends layout
+block content
+  h1 List of #{manager.displayName}
+  ul
+    for entity in manager.list()
+      li #{entity.displayName}
+        a(href="/admin/#{manager.slug}/edit/#{entity.id}") Edit

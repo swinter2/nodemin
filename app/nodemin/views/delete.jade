@@ -1,7 +1,7 @@
 extends layout
 block content
-  h1 Manager Index
+  h1 Models
   ul
-    for model in masterManager.managers
+    for model in manager.managers
       li 
         a(href="/admin/#{model.slug}") #{model.displayName}
