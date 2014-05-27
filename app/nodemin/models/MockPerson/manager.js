@@ -7,6 +7,9 @@ It needs to return entity metadata so that the admin can choose what to display.
 var MockPerson = require('./entity');
 
 module.exports = function () {
+
+    this.displayName = "Mock People";
+    this.indexSlug = "mock-people";
     
     this.get = function () {
         return new MockPerson();
