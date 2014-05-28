@@ -10,6 +10,7 @@ module.exports = function () {
 
     this.displayName = "Mock People";
     this.slug = "mock-people";
+    this.uploadedMediaPath = 'G:\\development\\nodemin\\uploads';
 
     // TODO: put an uploads path for user uploaded media.
     
